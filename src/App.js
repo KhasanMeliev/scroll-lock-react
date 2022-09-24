@@ -11,7 +11,7 @@ function App() {
         onClick={() => setScrollLocked((c) => !c)}
         variant="outline"
         leftIcon={
-          scrollLocked ? <AiFillLock size={16} /> : <AiFillUnlock size={16} />
+          scrollLocked ? <AiFillLock size={30} /> : <AiFillUnlock size={30} />
         }
         size="xl"
       >
