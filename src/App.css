@@ -6,10 +6,9 @@
 body {
   width: 100%;
   height: 100vh;
-  background-color: #fff;
+  background-color: #f9fd50;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  
 }
