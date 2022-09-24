@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useScrollLock } from "@mantine/hooks";
+import { Group, Button } from "@mantine/core";
+import { AiFillLock, AiFillUnlock } from "react-icons/ai";
 
 function App() {
+  const [scrollLocked, setScrollLocked] = useScrollLock();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Group>
+      <Button
+        onClick={() => setScrollLocked((c) => !c)}
+        variant="outline"
+        leftIcon={
+          scrollLocked ? <AiFillLock size={16} /> : <AiFillUnlock size={16} />
+        }
+        size="xl"
+      >
+        {scrollLocked ? "Unlock scroll" : "Lock scroll"}
+      </Button>
+    </Group>
   );
 }
 
